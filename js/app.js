@@ -5,8 +5,8 @@ fetch('https://cruth.phpnet.org/epfc/caviste/public/index.php/api/wines')
     .then(response => response.json())
     .then(json => {
 
-        const ULWineList = document.querySelector('wineList');
-        ULWineList.innerHTML ='';
+        const ULWineList = document.querySelector('#wineList');
+        ULWineList.innerHTML ="";
         json.forEach(wine => {
             console.log(wine.name);
             let LI = document.createElement('li');
@@ -22,7 +22,7 @@ fetch('https://cruth.phpnet.org/epfc/caviste/public/index.php/api/wines')
 
             });
 
-            ULWineList.appendChild(Li);
+            ULWineList.appendChild(LI);
 
         });
 
